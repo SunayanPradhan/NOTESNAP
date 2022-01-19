@@ -20,6 +20,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.transition.MaterialContainerTransform
 import com.sunayanpradhan.notesnap.R
 import com.sunayanpradhan.notesnap.activities.MainActivity
@@ -258,6 +259,45 @@ class SaveOrDeleteFragment : Fragment(R.layout.fragment_save_or_delete) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
+        val callback= object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                val builder = AlertDialog.Builder(inflater.context)
+                builder.setMessage("DO YOU WANT TO SAVE?")
+                builder.setCancelable(false)
+                builder.setPositiveButton("YES") {
+                        dialog, which -> saveNote()
+
+                }
+                builder.setNegativeButton("NO") {
+                        dialog, which ->
+
+                }
+                val alertDialog = builder.create()
+                alertDialog.show()
+
+
+
+
+
+
+            }
+
+
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,callback)
+
+
+
+
+
+
+
+
+
+
+
         return inflater.inflate(R.layout.fragment_save_or_delete,container,false)
     }
 
