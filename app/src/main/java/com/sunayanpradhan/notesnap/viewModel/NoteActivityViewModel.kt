@@ -23,7 +23,7 @@ class NoteActivityViewModel (private val repository: NoteRepository):ViewModel()
 
 
     fun deleteNote(existingNote: Note)=viewModelScope.launch(Dispatchers.IO) {
-        repository.addNote(existingNote)
+        repository.deleteNote(existingNote)
     }
 
     fun searchNote(query:String):LiveData<List<Note>>

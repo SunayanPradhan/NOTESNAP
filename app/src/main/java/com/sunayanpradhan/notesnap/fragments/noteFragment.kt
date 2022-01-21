@@ -7,11 +7,8 @@ import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
@@ -46,7 +43,6 @@ class noteFragment : Fragment(R.layout.fragment_note) {
     private lateinit var noteBinding: FragmentNoteBinding
     private val noteActivityViewModel: NoteActivityViewModel by activityViewModels()
     private lateinit var rvAdapter: RvNotesAdapter
-
 
     private var backPressedTime: Long = 0
     private var backToast: Toast? = null
@@ -256,7 +252,7 @@ class noteFragment : Fragment(R.layout.fragment_note) {
         val callback= object : OnBackPressedCallback(true){
             override fun handleOnBackPressed() {
                 if (backPressedTime + 2000 > System.currentTimeMillis()) {
-                    backToast!!.cancel()
+                    backToast?.cancel()
                     activity?.moveTaskToBack(true)
                     activity?.finish()
                     return

@@ -6,6 +6,8 @@
 
     </data>
 
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,24 +69,24 @@
 
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/noteDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/noteDate"
                     android:layout_below="@+id/noteContentItem"
+                    android:layout_alignParentEnd="true"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="4dp"
-                    android:padding="5dp"
                     android:drawableStart="@drawable/ic_outline_calendar_today_24"
                     android:drawablePadding="6dp"
+                    android:drawableTint="@color/black"
                     android:ellipsize="end"
                     android:fontFamily="@font/google_sans_regular"
+                    android:padding="5dp"
                     android:text="dd-mm-yy"
-                    android:layout_alignParentEnd="true"
-                    android:drawableTint="@color/black"
+                    android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textSize="12sp"
-                    android:textAlignment="textStart">
+                    android:textSize="12sp">
 
 
                 </com.google.android.material.textview.MaterialTextView>

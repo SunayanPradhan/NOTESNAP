@@ -134,7 +134,7 @@
             android:orientation="horizontal"
             android:clipToPadding="false"
             android:background="@drawable/fab_btn_corner"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="@color/purple"
             android:layout_margin="16dp">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -142,8 +142,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:id="@+id/inner_fab"
-                android:src="@drawable/ic_baseline_add_24"
-                android:backgroundTint="@color/black"
+                android:src="@drawable/ic_round_add_24"
+                android:backgroundTint="@color/purple"
+                android:background="@color/purple"
                 android:elevation="0dp"
                 android:tint="@color/white"
                 app:fabSize="normal"
@@ -159,8 +160,9 @@
                 android:id="@+id/chatFabText"
                 android:fontFamily="@font/google_sans_regular"
                 android:text="@string/add_note"
-                android:textColor="@color/white"
-                android:paddingStart="0dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingStart="5dp"
                 android:paddingEnd="20dp"
                 android:layout_gravity="center_vertical"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Button">

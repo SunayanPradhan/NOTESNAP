@@ -5,6 +5,7 @@ import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Window
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -18,6 +19,8 @@ import com.sunayanpradhan.notesnap.viewModel.NoteActivityViewModelFactory
 import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
+
+
 
     lateinit var noteActivityViewModel: NoteActivityViewModel
     lateinit var binding: ActivityMainBinding

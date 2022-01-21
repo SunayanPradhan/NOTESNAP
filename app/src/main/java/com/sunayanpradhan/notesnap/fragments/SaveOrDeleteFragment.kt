@@ -104,7 +104,9 @@ class SaveOrDeleteFragment : Fragment(R.layout.fragment_save_or_delete) {
 
             }
         } catch (e: Throwable) {
+
             Log.d("TAG", e.stackTraceToString())
+
         }
 
 
@@ -261,23 +263,53 @@ class SaveOrDeleteFragment : Fragment(R.layout.fragment_save_or_delete) {
     ): View? {
 
 
+
         val callback= object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                val builder = AlertDialog.Builder(inflater.context)
-                builder.setMessage("DO YOU WANT TO SAVE?")
-                builder.setCancelable(false)
-                builder.setPositiveButton("YES") {
-                        dialog, which -> saveNote()
+
+
+                if (contentBinding.etNoteContent.text.toString().isEmpty() ||
+                    contentBinding.etTitle.text.toString().isEmpty()
+                ) {
+                    navController.navigate(SaveOrDeleteFragmentDirections.actionSaveOrDeleteFragmentToNoteFragment())
 
                 }
-                builder.setNegativeButton("NO") {
-                        dialog, which ->
+                else {
+
+                    note=args.note
+                    when(note){
+                        null->{
+                            noteActivityViewModel.saveNote(
+                                Note(
+                                    0,
+                                    contentBinding.etTitle.text.toString(),
+                                    contentBinding.etNoteContent.getMD(),
+                                    currentDate,
+                                    color
+                                )
+                            )
+
+                            result="Note Saved"
+                            setFragmentResult(
+                                "key",
+                                bundleOf("bundleKey" to result)
+                            )
+
+                            navController.navigate(SaveOrDeleteFragmentDirections.actionSaveOrDeleteFragmentToNoteFragment())
+                        }
+                        else->
+                        {
+
+                            updateNote()
+                            navController.popBackStack()
+
+                        }
+                    }
+
+
+
 
                 }
-                val alertDialog = builder.create()
-                alertDialog.show()
-
-
 
 
 
@@ -287,15 +319,6 @@ class SaveOrDeleteFragment : Fragment(R.layout.fragment_save_or_delete) {
 
         }
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,callback)
-
-
-
-
-
-
-
-
-
 
 
         return inflater.inflate(R.layout.fragment_save_or_delete,container,false)
