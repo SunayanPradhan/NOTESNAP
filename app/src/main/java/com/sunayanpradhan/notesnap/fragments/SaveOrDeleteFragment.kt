@@ -60,6 +60,7 @@ class SaveOrDeleteFragment : Fragment(R.layout.fragment_save_or_delete) {
 
         }
 
+
         sharedElementEnterTransition=animation
         sharedElementReturnTransition=animation
     }
@@ -72,6 +73,9 @@ class SaveOrDeleteFragment : Fragment(R.layout.fragment_save_or_delete) {
 
         navController = Navigation.findNavController(view)
         val activity = activity as MainActivity
+
+        activity?.window?.statusBarColor=Color.WHITE
+
 
         ViewCompat.setTransitionName(
             contentBinding.noteContentFragmentParent,

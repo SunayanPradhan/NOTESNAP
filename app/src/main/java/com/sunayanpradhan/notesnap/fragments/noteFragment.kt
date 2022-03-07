@@ -70,10 +70,10 @@ class noteFragment : Fragment(R.layout.fragment_note) {
         CoroutineScope(Dispatchers.Main).launch {
             delay(10)
 
-            //activity.window.statusBarColor = Color.WHITE
+            activity?.window?.statusBarColor=Color.WHITE
+
             activity.window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
             activity.window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-            activity.window.statusBarColor = Color.parseColor("#9E9D9D")
         }
         noteBinding.addNoteFab.setOnClickListener {
             noteBinding.appBarLayout.visibility = View.INVISIBLE

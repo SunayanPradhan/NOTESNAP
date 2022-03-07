@@ -13,6 +13,7 @@
         tools:context=".fragments.noteFragment">
 
 
+
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,8 +24,7 @@
             <com.google.android.material.appbar.MaterialToolbar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
-                app:layout_scrollFlags="scroll|enterAlways">
+                android:background="@color/white">
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -46,6 +46,7 @@
 
                     </com.google.android.material.textview.MaterialTextView>
 
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -56,6 +57,7 @@
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="15dp"
                         android:layout_marginEnd="15dp">
+
 
                         <EditText
                             android:layout_width="0dp"
@@ -112,16 +114,15 @@
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:src="@drawable/ic_no_data"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:visibility="gone">
+                app:layout_constraintTop_toTopOf="parent">
 
             </ImageView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -134,24 +135,20 @@
             android:orientation="horizontal"
             android:clipToPadding="false"
             android:background="@drawable/fab_btn_corner"
-            android:backgroundTint="@color/purple"
             android:layout_margin="16dp">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <ImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
                 android:layout_gravity="center_vertical"
                 android:id="@+id/inner_fab"
-                android:src="@drawable/ic_round_add_24"
-                android:backgroundTint="@color/purple"
-                android:background="@color/purple"
+                android:src="@drawable/ic_baseline_add_24"
                 android:elevation="0dp"
-                android:tint="@color/white"
                 app:fabSize="normal"
                 app:borderWidth="0dp"
-                app:useCompatPadding="false">
+                android:padding="10dp">
 
-            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            </ImageView>
 
 
             <TextView
@@ -160,9 +157,8 @@
                 android:id="@+id/chatFabText"
                 android:fontFamily="@font/google_sans_regular"
                 android:text="@string/add_note"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold"
-                android:paddingStart="5dp"
                 android:paddingEnd="20dp"
                 android:layout_gravity="center_vertical"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Button">
