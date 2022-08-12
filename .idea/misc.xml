@@ -3,10 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/NOTESNAP/app/src/main/res/drawable-v24/date_rounded.xml" value="0.2005" />
+        <entry key="..\:/AndroidStudioProjects/NOTESNAP/app/src/main/res/drawable-v24/fab_btn_corner.xml" value="0.1595" />
+        <entry key="..\:/AndroidStudioProjects/NOTESNAP/app/src/main/res/drawable-v24/ic_baseline_color_lens_24.xml" value="0.204" />
+        <entry key="..\:/AndroidStudioProjects/NOTESNAP/app/src/main/res/drawable-v24/ic_baseline_save_24.xml" value="0.1595" />
+        <entry key="..\:/AndroidStudioProjects/NOTESNAP/app/src/main/res/drawable-v24/ic_no_data.xml" value="0.204" />
+        <entry key="..\:/AndroidStudioProjects/NOTESNAP/app/src/main/res/drawable-v24/ic_outline_calendar_today_24.xml" value="0.204" />
         <entry key="..\:/AndroidStudioProjects/NOTESNAP/app/src/main/res/drawable-v24/ic_round_search_24.xml" value="0.166" />
+        <entry key="..\:/AndroidStudioProjects/NOTESNAP/app/src/main/res/drawable-v24/rounded_search.xml" value="0.1805" />
         <entry key="..\:/AndroidStudioProjects/NOTESNAP/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.166" />
         <entry key="..\:/AndroidStudioProjects/NOTESNAP/app/src/main/res/drawable/ic_baseline_add_circle_outline_24.xml" value="0.166" />
+        <entry key="..\:/AndroidStudioProjects/NOTESNAP/app/src/main/res/layout/activity_main.xml" value="0.21195652173913043" />
+        <entry key="..\:/AndroidStudioProjects/NOTESNAP/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.21822916666666667" />
         <entry key="..\:/AndroidStudioProjects/NOTESNAP/app/src/main/res/layout/fragment_note.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudioProjects/NOTESNAP/app/src/main/res/layout/fragment_save_or_delete.xml" value="0.21195652173913043" />
+        <entry key="..\:/AndroidStudioProjects/NOTESNAP/app/src/main/res/layout/note_item_layout.xml" value="0.21195652173913043" />
         <entry key="..\:/Users/sunay/AndroidStudioProjects/NOTESNAP/app/src/main/res/drawable-v24/bottom_sheet_rounded.xml" value="0.1" />
         <entry key="..\:/Users/sunay/AndroidStudioProjects/NOTESNAP/app/src/main/res/drawable-v24/date_rounded.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/sunay/AndroidStudioProjects/NOTESNAP/app/src/main/res/drawable-v24/fab_btn_corner.xml" value="0.264" />

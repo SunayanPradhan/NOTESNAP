@@ -43,7 +43,7 @@ class SaveOrDeleteFragment : Fragment(R.layout.fragment_save_or_delete) {
     private lateinit var navController: NavController
     private lateinit var contentBinding: FragmentSaveOrDeleteBinding
     private var note: Note? = null
-    private var color = -1
+    private var color =-1315861
     private lateinit var result : String
     private val noteActivityViewModel: NoteActivityViewModel by activityViewModels()
     private val currentDate = SimpleDateFormat.getInstance().format(Date())
@@ -74,7 +74,7 @@ class SaveOrDeleteFragment : Fragment(R.layout.fragment_save_or_delete) {
         navController = Navigation.findNavController(view)
         val activity = activity as MainActivity
 
-        activity?.window?.statusBarColor=Color.WHITE
+        activity.window?.statusBarColor=Color.TRANSPARENT
 
 
         ViewCompat.setTransitionName(
@@ -145,6 +145,7 @@ class SaveOrDeleteFragment : Fragment(R.layout.fragment_save_or_delete) {
                             toolbarFragmentNoteContent.setBackgroundColor(color)
                             bottomBar.setBackgroundColor(color)
                             activity.window.statusBarColor=color
+                            activity.window?.navigationBarColor=color
                         }
                         bottomSheetBinding.bottomSheetParent.setCardBackgroundColor(color)
                     }
@@ -195,6 +196,7 @@ class SaveOrDeleteFragment : Fragment(R.layout.fragment_save_or_delete) {
 
             }
             activity?.window?.statusBarColor=note.color
+            activity?.window?.navigationBarColor=color
         }
 
 

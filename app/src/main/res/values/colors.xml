@@ -7,6 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="grey">#EBEBEB</color>
+
+    <color name="transparent">#00000000</color>
 
     <!--color palette-->
     <color name="purple">#D4C4E3</color>
@@ -27,7 +30,7 @@
 
 
     <array name="color_picker">
-        <item>@color/white</item>
+        <item>@color/grey</item>
         <item>@color/card_purple</item>
         <item>@color/card_yellow</item>
         <item>@color/card_red</item>

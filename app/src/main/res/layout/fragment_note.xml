@@ -24,7 +24,8 @@
             <com.google.android.material.appbar.MaterialToolbar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white">
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:backgroundTint="?attr/color">
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -40,7 +41,7 @@
                         android:fontFamily="@font/google_sans_bold"
                         android:text="My Notes"
                         android:textSize="30sp"
-                        android:textColor="@color/black"
+                        android:textColor="?attr/colorOnSecondary"
                         android:layout_marginTop="15dp"
                         android:layout_marginStart="2dp">
 
@@ -60,22 +61,22 @@
 
 
                         <EditText
+                            android:id="@+id/search"
                             android:layout_width="0dp"
                             android:layout_height="50dp"
-                            android:id="@+id/search"
+                            android:layout_weight="3"
                             android:background="@drawable/rounded_search"
                             android:drawableStart="@drawable/ic_round_search_24"
                             android:drawablePadding="5dp"
-                            android:imeOptions="actionSearch"
                             android:hint="@string/search_here"
+                            android:imeOptions="actionSearch"
+                            android:importantForAutofill="no"
+                            android:inputType="textFilter"
                             android:paddingStart="18dp"
                             android:paddingTop="4dp"
                             android:paddingEnd="18dp"
                             android:paddingBottom="5dp"
-                            android:textSize="16sp"
-                            android:importantForAutofill="no"
-                            android:inputType="textFilter"
-                            android:layout_weight="3">
+                            android:textSize="16sp">
 
                         </EditText>
 
@@ -155,10 +156,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/chatFabText"
-                android:fontFamily="@font/google_sans_regular"
+                android:fontFamily="@font/google_sans_bold"
                 android:text="@string/add_note"
-                android:textColor="@color/white"
-                android:textStyle="bold"
+                android:textColor="?attr/colorOnPrimary"
                 android:paddingEnd="20dp"
                 android:layout_gravity="center_vertical"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Button">

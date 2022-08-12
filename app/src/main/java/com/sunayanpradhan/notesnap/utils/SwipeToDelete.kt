@@ -18,5 +18,4 @@ abstract class SwipeToDelete:ItemTouchHelper.SimpleCallback(
         return true
     }
 
-
 }

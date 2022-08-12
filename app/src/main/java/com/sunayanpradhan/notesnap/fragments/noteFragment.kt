@@ -70,7 +70,9 @@ class noteFragment : Fragment(R.layout.fragment_note) {
         CoroutineScope(Dispatchers.Main).launch {
             delay(10)
 
-            activity?.window?.statusBarColor=Color.WHITE
+            activity.window?.statusBarColor= resources.getColor(android.R.color.transparent)
+
+            activity.window?.navigationBarColor=resources.getColor(android.R.color.transparent)
 
             activity.window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
             activity.window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
@@ -164,7 +166,7 @@ class noteFragment : Fragment(R.layout.fragment_note) {
                     observerDataChanges()
                 }
 
-                val snackbar = Snackbar.make(
+                val snackBar = Snackbar.make(
                     requireView(), "Note Deleted", Snackbar.LENGTH_LONG
                 ).addCallback(object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
                     override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
@@ -185,15 +187,14 @@ class noteFragment : Fragment(R.layout.fragment_note) {
                 }).apply {
                     animationMode = Snackbar.ANIMATION_MODE_FADE
                     setAnchorView(R.id.add_note_fab)
-
                 }
-                snackbar.setActionTextColor(
+                snackBar.setActionTextColor(
                     ContextCompat.getColor(
                         requireContext(),
                         R.color.yellowOrange
                     )
                 )
-                snackbar.show()
+                snackBar.show()
 
             }
         }
@@ -208,7 +209,6 @@ class noteFragment : Fragment(R.layout.fragment_note) {
         noteActivityViewModel.getAllNotes().observe(viewLifecycleOwner) { list ->
             noteBinding.noData.isVisible = list.isEmpty()
             rvAdapter.submitList(list)
-
         }
 
     }

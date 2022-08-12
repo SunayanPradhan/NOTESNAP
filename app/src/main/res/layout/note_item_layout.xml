@@ -28,7 +28,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:id="@+id/note_relative">
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
@@ -41,7 +42,7 @@
                     android:ellipsize="end"
                     android:fontFamily="@font/google_sans_medium"
                     android:text="This is a title"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/colorOnSecondary"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textAlignment="textStart">
@@ -50,9 +51,9 @@
                 </com.google.android.material.textview.MaterialTextView>
 
                 <TextView
+                    android:id="@+id/noteContentItem"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/noteContentItem"
                     android:layout_below="@+id/noteItemTitle"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="5dp"
@@ -62,8 +63,8 @@
                     android:fontFamily="@font/google_sans_medium"
                     android:maxLines="12"
                     android:padding="5dp"
-                    android:textSize="14sp"
-                    android:text="@string/some_text">
+                    android:text="@string/some_text"
+                    android:textSize="14sp">
 
                 </TextView>
 
@@ -79,13 +80,12 @@
                     android:layout_marginEnd="4dp"
                     android:drawableStart="@drawable/ic_outline_calendar_today_24"
                     android:drawablePadding="6dp"
-                    android:drawableTint="@color/black"
                     android:ellipsize="end"
                     android:fontFamily="@font/google_sans_regular"
                     android:padding="5dp"
                     android:text="dd-mm-yy"
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/colorOnSecondary"
                     android:textSize="12sp">
 
 
